@@ -1,0 +1,2575 @@
+{
+  "$schema": "./schemas/trip-data.schema.json",
+  "schemaVersion": "2.0-lite",
+  "config": {
+    "schemaVersion": "1.0.0",
+    "modules": {
+      "flights": true,
+      "overview": true,
+      "itinerary": true,
+      "todo": true,
+      "driving": false,
+      "ledger": true
+    },
+    "language": "zh-CN",
+    "persistence": {
+      "mode": "local"
+    }
+  },
+  "metadata": {
+    "tripId": "seoul-2026-11",
+    "title": "首爾行 2026｜弘大・聖水・安國・明洞",
+    "language": "zh-CN",
+    "timeZone": "Asia/Seoul",
+    "assets": {
+      "routeMaps": [
+        "assets/maps/templates/template-07-compact-basin.webp"
+      ]
+    }
+  },
+  "trip": {
+    "status": "draft",
+    "startDate": "2026-11-10",
+    "endDate": "2026-11-16",
+    "dayCount": 7,
+    "nightCountAway": 6,
+    "countries": [
+      {
+        "code": "KR",
+        "name": "South Korea",
+        "nameZh": "韓國",
+        "nameEn": "SOUTH KOREA"
+      }
+    ],
+    "primaryDestinationCountries": [
+      "KR"
+    ],
+    "citiesAndAreas": [
+      "首爾",
+      "弘大",
+      "聖水",
+      "安國",
+      "明洞",
+      "狎鷗亭",
+      "龍山",
+      "鍾路"
+    ],
+    "routeSummary": "弘大（住六晚）→ 聖水 → 安國・明洞 → 狎鷗亭 → 龍山 → 望遠・廣藏・東大門 → 弘大"
+  },
+  "flightJourneys": [
+    {
+      "id": "j-out",
+      "title": "去程 11/10 香港 → 首爾"
+    },
+    {
+      "id": "j-back",
+      "title": "回程 11/16 首爾 → 香港"
+    }
+  ],
+  "flights": [
+    {
+      "id": "f1",
+      "journeyId": "j-out",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "航空公司待確認"
+      },
+      "flightNumber": "待確認",
+      "departure": {
+        "airportCode": "HKG",
+        "city": "香港 T2",
+        "date": "2026-11-10",
+        "time": "07:15",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "ICN",
+        "city": "首爾仁川 T1",
+        "date": "2026-11-10",
+        "time": "11:40",
+        "utcOffset": "+09:00"
+      }
+    },
+    {
+      "id": "f2",
+      "journeyId": "j-back",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "大韓航空 · 經濟艙 · 波音 787-10"
+      },
+      "flightNumber": "KE2011",
+      "departure": {
+        "airportCode": "ICN",
+        "city": "首爾仁川 T2",
+        "date": "2026-11-16",
+        "time": "20:00",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "HKG",
+        "city": "香港 T1",
+        "date": "2026-11-16",
+        "time": "23:10",
+        "utcOffset": "+08:00"
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "stay-dw",
+      "name": "DW 設計公寓 DW디자인레지던스（35 Donggyo-ro 25-gil, Mapo-gu；入住 15:00 後，退房 11:00 前，免費寄存行李，訂房 11/6–11/16）",
+      "nights": [
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "status": "confirmed"
+    }
+  ],
+  "groundTransport": {
+    "rentalCar": null,
+    "rentalChecklist": [],
+    "drivingNotes": [],
+    "drivingReferenceLinks": [],
+    "plannedRoadLegs": [],
+    "publicTransitAndRail": [
+      {
+        "name": "機場快線 AREX（仁川機場 ⇄ 弘大入口站）",
+        "note": "普通列車約 50–60 分鐘直達弘大，唔使轉車。"
+      },
+      {
+        "name": "首爾地鐵＋T-money／Climate Card",
+        "note": "全程坐地鐵；弘大（2 號線）去聖水、蠶室（KSPO Dome）都係 2 號線；高尺搭 1 號線九一站。"
+      }
+    ]
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-11-10",
+      "title": "抵達＋豬腳小姐＋烏達里家醬油蟹",
+      "locations": [
+        "仁川機場",
+        "弘大"
+      ],
+      "schedule": [
+        {
+          "id": "d1-1",
+          "time": "07:15",
+          "type": "flight",
+          "text": "香港 T2 起飛 → 11:40 抵達仁川 T1（航班編號待確認）；入境前已填 e-Arrival Card",
+          "placeId": "icn"
+        },
+        {
+          "id": "d1-2",
+          "time": "11:40",
+          "type": "transfer",
+          "text": "機場快線 AREX 去弘大入口站（約 50–60 分鐘），行去 DW 設計公寓（동교로25길 35）寄存行李（免費）",
+          "placeIds": [
+            "icn",
+            "hongdae"
+          ]
+        },
+        {
+          "id": "d1-3",
+          "time": "13:00",
+          "type": "restaurant",
+          "text": "豬腳小姐 Myth Jokbal 弘大 lunch／tea，同朋友同佢媽媽一齊（어울마당로 123-1）",
+          "placeId": "myth-jokbal"
+        },
+        {
+          "id": "d1-4",
+          "time": "15:30",
+          "type": "note",
+          "text": "朋友送媽媽去機場；你 15:00 後喺 DW 設計公寓 check-in、休息，或者行弘大／延南洞",
+          "placeId": "hongdae"
+        },
+        {
+          "id": "d1-5",
+          "time": "19:00",
+          "type": "restaurant",
+          "text": "★ 烏達里家 Odarijip 弘大店 醬油蟹晚餐（朋友返到弘大一齊食；서교동 366-1，2–3 樓）",
+          "placeId": "udari"
+        },
+        {
+          "id": "d1-6",
+          "time": "20:30",
+          "type": "walk",
+          "text": "弘大 shopping／宵夜",
+          "placeId": "hongdae"
+        }
+      ],
+      "mapStops": [
+        "icn",
+        "hongdae",
+        "myth-jokbal",
+        "udari"
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-11-11",
+      "title": "聖水全日＋水芹菜牛肉湯飯＋無垢屋人蔘雞",
+      "locations": [
+        "聖水",
+        "安國"
+      ],
+      "schedule": [
+        {
+          "id": "d2-1",
+          "time": "10:30",
+          "type": "attraction",
+          "text": "聖水 pop-up／排隊店；先查當週 pop-up 要唔要預約或現場登記",
+          "placeId": "seongsu"
+        },
+        {
+          "id": "d2-2",
+          "time": "12:00",
+          "type": "restaurant",
+          "text": "★ 陵洞水芹菜 능동미나리 聖水店：水芹菜牛肉湯飯（42 Yeonmujang-gil）",
+          "placeId": "neungdong"
+        },
+        {
+          "id": "d2-3",
+          "time": "13:30",
+          "type": "attraction",
+          "text": "New Mix、AMUSE、Point of View、Dasique、PLAYX Studio、鄭宣梅 JUNGSAEMMOOL 旗艦店",
+          "placeId": "seongsu"
+        },
+        {
+          "id": "d2-4",
+          "time": "15:30",
+          "type": "attraction",
+          "text": "可選：MLB 聖水旗艦店（연무장길 25，有 custom cap 位，北村店做唔到可以喺度做）",
+          "placeId": "mlb-seongsu"
+        },
+        {
+          "id": "d2-5",
+          "time": "16:00",
+          "type": "restaurant",
+          "text": "Maman Gelato",
+          "placeId": "maman-gelato"
+        },
+        {
+          "id": "d2-6",
+          "time": "17:00",
+          "type": "transfer",
+          "text": "去安國（地鐵約 30 分鐘）；無垢屋好多人排，17:00 前到登記等位",
+          "placeIds": [
+            "seongsu",
+            "muguok"
+          ]
+        },
+        {
+          "id": "d2-7",
+          "time": "18:00",
+          "type": "restaurant",
+          "text": "★ 無垢屋 무구옥：北韓式人蔘雞（율곡로1길 7；網上資料 11:30–21:00，15:00–17:30 休息，招牌 이북식 삼계백반 ₩18,000）",
+          "placeId": "muguok"
+        },
+        {
+          "id": "d2-8",
+          "time": "20:00",
+          "type": "return",
+          "text": "回弘大",
+          "placeId": "hongdae"
+        }
+      ],
+      "notes": [
+        "無垢屋喺安國，唔喺聖水，所以晚餐要搭地鐵過去。",
+        "部分聖水品牌店有個別休息日，唔好當每間都一定開。"
+      ],
+      "mapStops": [
+        "seongsu",
+        "neungdong",
+        "maman-gelato",
+        "muguok"
+      ],
+      "mapAltStops": [
+        "mlb-seongsu"
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-11-12",
+      "title": "安國（MLB 定製帽＋大瓦房醬油蟹）＋明洞 shopping＋水刺醬蟹",
+      "locations": [
+        "安國",
+        "明洞"
+      ],
+      "schedule": [
+        {
+          "id": "d3-1",
+          "time": "09:00",
+          "type": "restaurant",
+          "text": "可選早餐：London Bagel Museum 安國店（要排隊）",
+          "placeId": "london-bagel"
+        },
+        {
+          "id": "d3-2",
+          "time": "10:00",
+          "type": "attraction",
+          "text": "MLB 北村店做 custom cap（分店地址未查到，用 KakaoMap 搜「MLB 북촌」；做唔到就改去聖水旗艦店）",
+          "placeId": "mlb-bukchon"
+        },
+        {
+          "id": "d3-3",
+          "time": "11:30",
+          "type": "restaurant",
+          "text": "★ 大瓦房 큰기와집 醬油蟹午餐（북촌로 22；11:30–21:00，15:00–17:30 休息；간장게장 ₩59,000）",
+          "placeId": "keungiwa"
+        },
+        {
+          "id": "d3-4",
+          "time": "13:30",
+          "type": "attraction",
+          "text": "明洞 shopping：READY YOUNG、OWM Pharmacy、OFF BEAUTY、藥妝店",
+          "placeId": "myeongdong"
+        },
+        {
+          "id": "d3-5",
+          "time": "19:00",
+          "type": "restaurant",
+          "text": "★ 水刺醬蟹 수라게장 明洞2號店 晚餐（명동2길 8，2 樓；每日 12:00–00:00）",
+          "placeId": "sura-gejang"
+        },
+        {
+          "id": "d3-6",
+          "time": "20:30",
+          "type": "walk",
+          "text": "明洞繼續 shopping，之後回弘大",
+          "placeId": "myeongdong"
+        }
+      ],
+      "mapStops": [
+        "london-bagel",
+        "mlb-bukchon",
+        "keungiwa",
+        "myeongdong",
+        "sura-gejang"
+      ],
+      "mapAltStops": []
+    },
+    {
+      "day": 4,
+      "date": "2026-11-13",
+      "title": "狎鷗亭牛腸＋NUDAKE；朋友去 TXT",
+      "locations": [
+        "狎鷗亭",
+        "新沙",
+        "弘大"
+      ],
+      "schedule": [
+        {
+          "id": "d4-1",
+          "time": "12:00",
+          "type": "restaurant",
+          "text": "★ 狎鷗亭牛腸 압구정곱창（압구정로42길 25-8；12:00–22:50，16:00–17:00 休息）",
+          "placeId": "apgujeong-gopchang"
+        },
+        {
+          "id": "d4-2",
+          "time": "13:45",
+          "type": "restaurant",
+          "text": "可選 cafe：NUDAKE Haus Dosan（압구정로46길 50，B1；11:00–21:00）",
+          "placeId": "nudake"
+        },
+        {
+          "id": "d4-3",
+          "time": "15:45",
+          "type": "note",
+          "text": "朋友出發去 KSPO Dome 睇 TXT（16:30 到場）"
+        },
+        {
+          "id": "d4-4",
+          "time": "16:00",
+          "type": "walk",
+          "text": "你自由行：島山公園一帶、新沙洞林蔭道 Garosu-gil shopping",
+          "placeId": "garosu"
+        },
+        {
+          "id": "d4-5",
+          "time": "19:00",
+          "type": "restaurant",
+          "text": "晚餐自由（可以返弘大食）",
+          "placeId": "hongdae"
+        },
+        {
+          "id": "d4-6",
+          "time": "22:30",
+          "type": "restaurant",
+          "text": "★ 深夜：BBIDDAK（朋友推介，13 或 14 號夜晚可以去；地址未查到，用 KakaoMap 搜「BBIDDAK」）",
+          "placeId": "hongdae"
+        }
+      ],
+      "mapStops": [
+        "hongdae",
+        "apgujeong-gopchang",
+        "nudake",
+        "garosu"
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-11-14",
+      "title": "龍山烤肉＋DORÉ DORÉ 無花果麻糬蛋糕；朋友去 MMA",
+      "locations": [
+        "龍山"
+      ],
+      "schedule": [
+        {
+          "id": "d5-1",
+          "time": "10:30",
+          "type": "attraction",
+          "text": "龍山 I'Park Mall",
+          "placeId": "ipark"
+        },
+        {
+          "id": "d5-2",
+          "time": "12:00",
+          "type": "restaurant",
+          "text": "★ DORÉ DORÉ：Justin Bieber 同款無花果麻糬蛋糕（I'Park Mall The Center 4F）",
+          "placeId": "ipark"
+        },
+        {
+          "id": "d5-3",
+          "time": "13:30",
+          "type": "restaurant",
+          "text": "★ 龍山烤肉：建議夢炭 Mongtan（백범로99길 50，三角地站 8 號出口；稻草火烤五花、牛肋；好多人排，早啲去登記）",
+          "placeId": "mongtan"
+        },
+        {
+          "id": "d5-4",
+          "time": "15:30",
+          "type": "attraction",
+          "text": "可選：HYBE 本社外觀打卡（42 Hangang-daero）",
+          "placeId": "hybe"
+        },
+        {
+          "id": "d5-5",
+          "time": "16:15",
+          "type": "note",
+          "text": "朋友出發去高尺天空巨蛋睇 MMA（17:30 到場）"
+        },
+        {
+          "id": "d5-6",
+          "time": "16:30",
+          "type": "attraction",
+          "text": "你返 I'Park Mall 繼續 shopping（入面有 E-Mart、電器、玩具）",
+          "placeId": "ipark"
+        },
+        {
+          "id": "d5-7",
+          "time": "22:30",
+          "type": "restaurant",
+          "text": "★ 深夜：BBIDDAK（朋友推介，13 或 14 號夜晚可以去；地址未查到，用 KakaoMap 搜「BBIDDAK」）",
+          "placeId": "hongdae"
+        }
+      ],
+      "mapStops": [
+        "ipark",
+        "mongtan",
+        "hybe",
+        "hongdae"
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2026-11-15",
+      "title": "望遠市場＋廣藏市場生牛肉生章魚＋一隻雞",
+      "locations": [
+        "望遠",
+        "鍾路",
+        "東大門"
+      ],
+      "schedule": [
+        {
+          "id": "d6-1",
+          "time": "10:30",
+          "type": "attraction",
+          "text": "望遠市場",
+          "placeId": "mangwon"
+        },
+        {
+          "id": "d6-2",
+          "time": "12:00",
+          "type": "transfer",
+          "text": "去鍾路（地鐵約 40 分鐘）",
+          "placeIds": [
+            "mangwon",
+            "gwangjang"
+          ]
+        },
+        {
+          "id": "d6-3",
+          "time": "13:00",
+          "type": "restaurant",
+          "text": "★ 廣藏市場：生牛肉 육회、生章魚 산낙지、街頭小食",
+          "placeId": "gwangjang"
+        },
+        {
+          "id": "d6-4",
+          "time": "15:00",
+          "type": "rest",
+          "text": "回弘大休息／自由活動",
+          "placeId": "hongdae"
+        },
+        {
+          "id": "d6-5",
+          "time": "18:30",
+          "type": "restaurant",
+          "text": "★ 陳玉華奶奶一隻雞 진옥화할매원조닭한마리（東大門，종로40가길 18）",
+          "placeId": "jinokhwa"
+        },
+        {
+          "id": "d6-6",
+          "time": "20:30",
+          "type": "walk",
+          "text": "回弘大 shopping／宵夜",
+          "placeId": "hongdae"
+        }
+      ],
+      "notes": [
+        "朋友文件將一隻雞排喺廣藏市場之前做午餐；你想晏晝食都得，兩間行路 10 分鐘。"
+      ],
+      "mapStops": [
+        "mangwon",
+        "gwangjang",
+        "jinokhwa",
+        "hongdae"
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-11-16",
+      "title": "弘大花蟹世界／烤肉＋回程",
+      "locations": [
+        "弘大",
+        "仁川機場"
+      ],
+      "schedule": [
+        {
+          "id": "d7-1",
+          "time": "10:00",
+          "type": "check-out",
+          "text": "DW 設計公寓退房（11:00 前），行李免費寄存",
+          "placeId": "hongdae"
+        },
+        {
+          "id": "d7-2",
+          "time": "10:30",
+          "type": "walk",
+          "text": "弘大／延南洞最後 shopping，補返之前未去到嘅店",
+          "placeId": "hongdae"
+        },
+        {
+          "id": "d7-3",
+          "time": "12:30",
+          "type": "restaurant",
+          "text": "★ 午餐：花蟹世界 꽃게나라 弘大店；或者改食烤肉 Doma 韓牛（양화로16길 33，弘大入口站 9 號出口）",
+          "placeIds": [
+            "kkotge-nara",
+            "doma"
+          ]
+        },
+        {
+          "id": "d7-4",
+          "time": "15:00",
+          "type": "return",
+          "text": "回 DW 設計公寓攞行李",
+          "placeId": "hongdae"
+        },
+        {
+          "id": "d7-5",
+          "time": "15:30",
+          "type": "transfer",
+          "text": "AREX 去仁川機場 T2（大韓航空喺 T2）",
+          "placeIds": [
+            "hongdae",
+            "icn"
+          ]
+        },
+        {
+          "id": "d7-6",
+          "time": "20:00",
+          "type": "flight",
+          "text": "KE2011 仁川 T2 20:00 起飛 → 23:10 抵達香港 T1",
+          "placeId": "icn"
+        }
+      ],
+      "mapStops": [
+        "hongdae",
+        "kkotge-nara",
+        "doma",
+        "icn"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "icn",
+      "name": "Incheon Airport T1",
+      "nameZh": "仁川機場",
+      "cityOrArea": "仁川",
+      "geo": {
+        "lat": 37.4602,
+        "lng": 126.4407
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "인천국제공항 제1여객터미널"
+    },
+    {
+      "id": "hongdae",
+      "name": "DW Design Residence",
+      "nameZh": "DW 設計公寓（酒店）",
+      "cityOrArea": "弘大・延南洞",
+      "geo": {
+        "lat": 37.5591,
+        "lng": 126.9232
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "DW디자인레지던스 서울 마포구 동교로25길 35",
+      "kakaoName": "DW디자인레지던스"
+    },
+    {
+      "id": "myth-jokbal",
+      "name": "Myth Jokbal Hongdae",
+      "nameZh": "豬腳小姐 弘大",
+      "cityOrArea": "弘大",
+      "geo": {
+        "lat": 37.5559,
+        "lng": 126.9227
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "미쓰족발 홍대 서울 마포구 어울마당로 123-1"
+    },
+    {
+      "id": "kkotge-nara",
+      "name": "Kkotge Nara Hongdae",
+      "nameZh": "花蟹世界 弘大店",
+      "cityOrArea": "弘大",
+      "geo": {
+        "lat": 37.5546,
+        "lng": 126.923
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "꽃게나라 홍대점"
+    },
+    {
+      "id": "seongsu",
+      "name": "Seongsu",
+      "nameZh": "聖水 Pop-up 街",
+      "cityOrArea": "聖水",
+      "geo": {
+        "lat": 37.5446,
+        "lng": 127.056
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "성수역"
+    },
+    {
+      "id": "neungdong",
+      "name": "Neungdong Minari Seongsu",
+      "nameZh": "陵洞水芹菜 聖水店",
+      "cityOrArea": "聖水",
+      "geo": {
+        "lat": 37.5426,
+        "lng": 127.0553
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "능동미나리 성수점 연무장길 42"
+    },
+    {
+      "id": "maman-gelato",
+      "name": "Maman Gelato Seongsu",
+      "nameZh": "Maman Gelato",
+      "cityOrArea": "聖水",
+      "geo": {
+        "lat": 37.544,
+        "lng": 127.0525
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "마망젤라또 성수"
+    },
+    {
+      "id": "myeongdong",
+      "name": "Myeongdong",
+      "nameZh": "明洞",
+      "cityOrArea": "明洞",
+      "geo": {
+        "lat": 37.5636,
+        "lng": 126.985
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "명동역"
+    },
+    {
+      "id": "sura-gejang",
+      "name": "Sura Gejang Myeongdong 2",
+      "nameZh": "水刺醬蟹 明洞2號店",
+      "cityOrArea": "明洞",
+      "geo": {
+        "lat": 37.5627,
+        "lng": 126.983
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "수라게장 명동2호점 서울 중구 명동2길 8"
+    },
+    {
+      "id": "udari",
+      "name": "Odarijip Hongdae",
+      "nameZh": "烏達里家 Odarijip 弘大店",
+      "cityOrArea": "弘大",
+      "geo": {
+        "lat": 37.5541,
+        "lng": 126.921
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "오다리집 간장게장 홍대점 서교동 366-1"
+    },
+    {
+      "id": "nudake",
+      "name": "NUDAKE Haus Dosan",
+      "nameZh": "NUDAKE Haus Dosan",
+      "cityOrArea": "狎鷗亭",
+      "geo": {
+        "lat": 37.5246,
+        "lng": 127.0372
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "누데이크 하우스 도산 압구정로46길 50"
+    },
+    {
+      "id": "ipark",
+      "name": "Yongsan I'Park Mall",
+      "nameZh": "龍山 I'Park Mall（DORÉ DORÉ 喺 The Center 4F）",
+      "cityOrArea": "龍山",
+      "geo": {
+        "lat": 37.5296,
+        "lng": 126.9648
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "용산 아이파크몰"
+    },
+    {
+      "id": "mongtan",
+      "name": "Mongtan",
+      "nameZh": "夢炭 Mongtan（龍山烤豬肉）",
+      "cityOrArea": "龍山",
+      "geo": {
+        "lat": 37.5345,
+        "lng": 126.973
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "몽탄 서울 용산구 백범로99길 50"
+    },
+    {
+      "id": "hybe",
+      "name": "HYBE HQ",
+      "nameZh": "HYBE 本社",
+      "cityOrArea": "龍山",
+      "geo": {
+        "lat": 37.5246,
+        "lng": 126.9644
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "하이브 용산 한강대로 42"
+    },
+    {
+      "id": "mangwon",
+      "name": "Mangwon Market",
+      "nameZh": "望遠市場",
+      "cityOrArea": "望遠",
+      "geo": {
+        "lat": 37.556,
+        "lng": 126.9065
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "망원시장"
+    },
+    {
+      "id": "gwangjang",
+      "name": "Gwangjang Market",
+      "nameZh": "廣藏市場",
+      "cityOrArea": "鍾路",
+      "geo": {
+        "lat": 37.57,
+        "lng": 127.0099
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "광장시장"
+    },
+    {
+      "id": "doma",
+      "name": "Doma Hongdae",
+      "nameZh": "Doma 韓牛 弘大",
+      "cityOrArea": "弘大",
+      "geo": {
+        "lat": 37.5548,
+        "lng": 126.9203
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "서울 마포구 양화로16길 33"
+    },
+    {
+      "id": "london-bagel",
+      "name": "London Bagel Museum Anguk",
+      "nameZh": "London Bagel Museum 安國",
+      "cityOrArea": "鍾路",
+      "geo": {
+        "lat": 37.5794,
+        "lng": 126.9866
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "런던베이글뮤지엄 안국점"
+    },
+    {
+      "id": "muguok",
+      "name": "Muguok",
+      "nameZh": "無垢屋 무구옥（人蔘雞）",
+      "cityOrArea": "安國",
+      "geo": {
+        "lat": 37.5765,
+        "lng": 126.979
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "무구옥 서울 종로구 율곡로1길 7"
+    },
+    {
+      "id": "mlb-bukchon",
+      "name": "MLB Bukchon",
+      "nameZh": "MLB 北村店（custom cap）",
+      "cityOrArea": "安國",
+      "geo": {
+        "lat": 37.579,
+        "lng": 126.9858
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "MLB 북촌"
+    },
+    {
+      "id": "mlb-seongsu",
+      "name": "MLB Seongsu Flagship",
+      "nameZh": "MLB 聖水旗艦店（custom cap 後備）",
+      "cityOrArea": "聖水",
+      "geo": {
+        "lat": 37.5432,
+        "lng": 127.0547
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "MLB 성수 플래그십 연무장길 25"
+    },
+    {
+      "id": "keungiwa",
+      "name": "Keungiwajip",
+      "nameZh": "大瓦房 큰기와집（醬油蟹）",
+      "cityOrArea": "安國",
+      "geo": {
+        "lat": 37.5785,
+        "lng": 126.9862
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "큰기와집 서울 종로구 북촌로 22"
+    },
+    {
+      "id": "myeongdong-kyoja",
+      "name": "Myeongdong Kyoja",
+      "nameZh": "明洞餃子（刀削麵）",
+      "cityOrArea": "明洞",
+      "geo": {
+        "lat": 37.5625,
+        "lng": 126.9856
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "명동교자 본점"
+    },
+    {
+      "id": "apgujeong-gopchang",
+      "name": "Apgujeong Gopchang",
+      "nameZh": "狎鷗亭牛腸 압구정곱창",
+      "cityOrArea": "狎鷗亭",
+      "geo": {
+        "lat": 37.5262,
+        "lng": 127.033
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "압구정곱창 서울 강남구 압구정로42길 25-8"
+    },
+    {
+      "id": "garosu",
+      "name": "Garosu-gil",
+      "nameZh": "新沙洞林蔭道 Garosu-gil",
+      "cityOrArea": "新沙",
+      "geo": {
+        "lat": 37.5205,
+        "lng": 127.023
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "가로수길"
+    },
+    {
+      "id": "jinokhwa",
+      "name": "Jinokhwa Halmae Dakhanmari",
+      "nameZh": "陳玉華奶奶一隻雞",
+      "cityOrArea": "東大門",
+      "geo": {
+        "lat": 37.5707,
+        "lng": 127.0058
+      },
+      "countryCode": "KR",
+      "googleMapsQuery": "진옥화할매원조닭한마리"
+    }
+  ],
+  "restaurants": [],
+  "bookingsAndTickets": [],
+  "ticketPlanning": {
+    "statusStorage": "local",
+    "statusStorageNote": "门票状态默认只保存在当前浏览器。",
+    "items": []
+  },
+  "preTrip": {
+    "packingItems": [
+      {
+        "id": "todo-earrival",
+        "text": "入境審查：出發前 3 天內（11/7 起）喺 e-arrivalcard.go.kr 填 Korea e-Arrival Card（抵達前 72 小時內先可以交）。香港護照 2026 年免 K-ETA，但入境卡要填",
+        "completed": false
+      }
+    ],
+    "preparationsExplicitlyMentioned": [],
+    "missingNote": ""
+  },
+  "mapLinks": {
+    "providedGoogleMapsLinks": [],
+    "note": "",
+    "cityLevelNavigationDisabled": false,
+    "navigationPolicy": {
+      "noNavigationTypes": [
+        "flight",
+        "note",
+        "rest"
+      ],
+      "selfNavigationTypes": [
+        "drive",
+        "return",
+        "transfer",
+        "check-in",
+        "check-out",
+        "restaurant",
+        "attraction",
+        "walk",
+        "hike"
+      ]
+    },
+    "navigationPlaces": []
+  },
+  "issuesAndUncertainties": [
+    "去程 11/10 07:15 航班嘅航空公司同編號截圖冇顯示",
+    "BBIDDAK、MLB 北村店地址網上查唔到",
+    "無垢屋喺安國唔喺聖水，11/11 晚餐要過去",
+    "龍山烤肉店名朋友冇寫，暫用夢炭"
+  ],
+  "map": {
+    "schemaVersion": "1.0-lite",
+    "mapMode": "template-auto",
+    "templateId": "auto",
+    "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+    "region": {
+      "id": "kr-seoul",
+      "label": "首爾",
+      "countryCode": "KR"
+    },
+    "places": [
+      {
+        "id": "icn",
+        "name": "Incheon Airport T1",
+        "nameZh": "仁川機場",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.4602,
+          "lng": 126.4407
+        }
+      },
+      {
+        "id": "hongdae",
+        "name": "DW Design Residence",
+        "nameZh": "DW 設計公寓（酒店）",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5591,
+          "lng": 126.9232
+        }
+      },
+      {
+        "id": "myth-jokbal",
+        "name": "Myth Jokbal Hongdae",
+        "nameZh": "豬腳小姐 弘大",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5559,
+          "lng": 126.9227
+        }
+      },
+      {
+        "id": "kkotge-nara",
+        "name": "Kkotge Nara Hongdae",
+        "nameZh": "花蟹世界 弘大店",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5546,
+          "lng": 126.923
+        }
+      },
+      {
+        "id": "seongsu",
+        "name": "Seongsu",
+        "nameZh": "聖水 Pop-up 街",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5446,
+          "lng": 127.056
+        }
+      },
+      {
+        "id": "neungdong",
+        "name": "Neungdong Minari Seongsu",
+        "nameZh": "陵洞水芹菜 聖水店",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5426,
+          "lng": 127.0553
+        }
+      },
+      {
+        "id": "maman-gelato",
+        "name": "Maman Gelato Seongsu",
+        "nameZh": "Maman Gelato",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.544,
+          "lng": 127.0525
+        }
+      },
+      {
+        "id": "myeongdong",
+        "name": "Myeongdong",
+        "nameZh": "明洞",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5636,
+          "lng": 126.985
+        }
+      },
+      {
+        "id": "sura-gejang",
+        "name": "Sura Gejang Myeongdong 2",
+        "nameZh": "水刺醬蟹 明洞2號店",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5627,
+          "lng": 126.983
+        }
+      },
+      {
+        "id": "udari",
+        "name": "Odarijip Hongdae",
+        "nameZh": "烏達里家 Odarijip 弘大店",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5541,
+          "lng": 126.921
+        }
+      },
+      {
+        "id": "nudake",
+        "name": "NUDAKE Haus Dosan",
+        "nameZh": "NUDAKE Haus Dosan",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5246,
+          "lng": 127.0372
+        }
+      },
+      {
+        "id": "ipark",
+        "name": "Yongsan I'Park Mall",
+        "nameZh": "龍山 I'Park Mall（DORÉ DORÉ 喺 The Center 4F）",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5296,
+          "lng": 126.9648
+        }
+      },
+      {
+        "id": "mongtan",
+        "name": "Mongtan",
+        "nameZh": "夢炭 Mongtan（龍山烤豬肉）",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5345,
+          "lng": 126.973
+        }
+      },
+      {
+        "id": "hybe",
+        "name": "HYBE HQ",
+        "nameZh": "HYBE 本社",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5246,
+          "lng": 126.9644
+        }
+      },
+      {
+        "id": "mangwon",
+        "name": "Mangwon Market",
+        "nameZh": "望遠市場",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.556,
+          "lng": 126.9065
+        }
+      },
+      {
+        "id": "gwangjang",
+        "name": "Gwangjang Market",
+        "nameZh": "廣藏市場",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.57,
+          "lng": 127.0099
+        }
+      },
+      {
+        "id": "doma",
+        "name": "Doma Hongdae",
+        "nameZh": "Doma 韓牛 弘大",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5548,
+          "lng": 126.9203
+        }
+      },
+      {
+        "id": "london-bagel",
+        "name": "London Bagel Museum Anguk",
+        "nameZh": "London Bagel Museum 安國",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5794,
+          "lng": 126.9866
+        }
+      },
+      {
+        "id": "muguok",
+        "name": "Muguok",
+        "nameZh": "無垢屋 무구옥（人蔘雞）",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5765,
+          "lng": 126.979
+        }
+      },
+      {
+        "id": "mlb-bukchon",
+        "name": "MLB Bukchon",
+        "nameZh": "MLB 北村店（custom cap）",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.579,
+          "lng": 126.9858
+        }
+      },
+      {
+        "id": "mlb-seongsu",
+        "name": "MLB Seongsu Flagship",
+        "nameZh": "MLB 聖水旗艦店（custom cap 後備）",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5432,
+          "lng": 127.0547
+        }
+      },
+      {
+        "id": "keungiwa",
+        "name": "Keungiwajip",
+        "nameZh": "大瓦房 큰기와집（醬油蟹）",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5785,
+          "lng": 126.9862
+        }
+      },
+      {
+        "id": "myeongdong-kyoja",
+        "name": "Myeongdong Kyoja",
+        "nameZh": "明洞餃子（刀削麵）",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5625,
+          "lng": 126.9856
+        }
+      },
+      {
+        "id": "apgujeong-gopchang",
+        "name": "Apgujeong Gopchang",
+        "nameZh": "狎鷗亭牛腸 압구정곱창",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5262,
+          "lng": 127.033
+        }
+      },
+      {
+        "id": "garosu",
+        "name": "Garosu-gil",
+        "nameZh": "新沙洞林蔭道 Garosu-gil",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5205,
+          "lng": 127.023
+        }
+      },
+      {
+        "id": "jinokhwa",
+        "name": "Jinokhwa Halmae Dakhanmari",
+        "nameZh": "陳玉華奶奶一隻雞",
+        "countryCode": "KR",
+        "mapRegionId": "kr-seoul",
+        "geo": {
+          "lat": 37.5707,
+          "lng": 127.0058
+        }
+      }
+    ],
+    "routes": [
+      {
+        "day": 1,
+        "placeIds": [
+          "icn",
+          "hongdae",
+          "myth-jokbal",
+          "udari"
+        ]
+      },
+      {
+        "day": 2,
+        "placeIds": [
+          "seongsu",
+          "neungdong",
+          "maman-gelato",
+          "muguok"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "london-bagel",
+          "mlb-bukchon",
+          "keungiwa",
+          "myeongdong",
+          "sura-gejang"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "hongdae",
+          "apgujeong-gopchang",
+          "nudake",
+          "garosu"
+        ]
+      },
+      {
+        "day": 5,
+        "placeIds": [
+          "ipark",
+          "mongtan",
+          "hybe",
+          "hongdae"
+        ]
+      },
+      {
+        "day": 6,
+        "placeIds": [
+          "mangwon",
+          "gwangjang",
+          "jinokhwa",
+          "hongdae"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "hongdae",
+          "kkotge-nara",
+          "doma",
+          "icn"
+        ]
+      }
+    ],
+    "dailyRoutes": [
+      {
+        "day": 1,
+        "placeIds": [
+          "icn",
+          "hongdae",
+          "myth-jokbal",
+          "udari"
+        ]
+      },
+      {
+        "day": 2,
+        "placeIds": [
+          "seongsu",
+          "neungdong",
+          "maman-gelato",
+          "muguok"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "london-bagel",
+          "mlb-bukchon",
+          "keungiwa",
+          "myeongdong",
+          "sura-gejang"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "hongdae",
+          "apgujeong-gopchang",
+          "nudake",
+          "garosu"
+        ]
+      },
+      {
+        "day": 5,
+        "placeIds": [
+          "ipark",
+          "mongtan",
+          "hybe",
+          "hongdae"
+        ]
+      },
+      {
+        "day": 6,
+        "placeIds": [
+          "mangwon",
+          "gwangjang",
+          "jinokhwa",
+          "hongdae"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "hongdae",
+          "kkotge-nara",
+          "doma",
+          "icn"
+        ]
+      }
+    ]
+  },
+  "googleMapAreas": [
+    {
+      "id": "hongdae",
+      "label": "弘大・麻浦",
+      "stops": [
+        "hongdae",
+        "myth-jokbal",
+        "udari",
+        "kkotge-nara",
+        "doma",
+        "mangwon"
+      ]
+    },
+    {
+      "id": "seongsu",
+      "label": "聖水",
+      "stops": [
+        "seongsu",
+        "neungdong",
+        "maman-gelato",
+        "mlb-seongsu"
+      ]
+    },
+    {
+      "id": "anguk",
+      "label": "安國・北村",
+      "stops": [
+        "london-bagel",
+        "mlb-bukchon",
+        "keungiwa",
+        "muguok"
+      ]
+    },
+    {
+      "id": "myeongdong",
+      "label": "明洞",
+      "stops": [
+        "myeongdong",
+        "myeongdong-kyoja",
+        "sura-gejang"
+      ]
+    },
+    {
+      "id": "gangnam",
+      "label": "狎鷗亭・新沙",
+      "stops": [
+        "apgujeong-gopchang",
+        "nudake",
+        "garosu"
+      ]
+    },
+    {
+      "id": "yongsan",
+      "label": "龍山",
+      "stops": [
+        "ipark",
+        "mongtan",
+        "hybe"
+      ]
+    },
+    {
+      "id": "jongno",
+      "label": "廣藏・東大門",
+      "stops": [
+        "gwangjang",
+        "jinokhwa"
+      ]
+    }
+  ],
+  "routeMap": {
+    "defaultRegionId": "kr-seoul",
+    "regions": [
+      {
+        "id": "kr-seoul",
+        "label": "首爾",
+        "countryCode": "KR",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "compact-basin",
+        "mapModeReason": "dense-place-cluster",
+        "mapModeMetrics": {
+          "placeCount": 26,
+          "geoPlaceCount": 26,
+          "widthKm": 54.15,
+          "heightKm": 13.23,
+          "spanKm": 55.08,
+          "averageNearestKm": 1.97,
+          "components": 3,
+          "largestLegKm": 43.96,
+          "jumpRatio": 43.96
+        },
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-07-compact-basin.webp",
+        "title": "首爾 · 旅行路线",
+        "ariaLabel": "首爾模板化旅行路线示意图，共7天",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "首爾",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 1,
+            "color": "#397dc1",
+            "placeIds": [
+              "icn",
+              "hongdae",
+              "myth-jokbal",
+              "udari"
+            ],
+            "paths": [
+              "M300 627.63 C492.4 512.8 696.6 425.5 900.51 370.95 C888.1 431.4 893.0 490.4 915.02 544.46 C891.8 536.5 872.5 522.9 858.41 504.5"
+            ],
+            "overviewPaths": [
+              "M300 627.63 C492.4 512.8 696.6 425.5 900.51 370.95 C872.8 412.1 858.5 457.6 858.41 504.5"
+            ]
+          },
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "seongsu",
+              "neungdong",
+              "maman-gelato",
+              "muguok"
+            ],
+            "paths": [
+              "M1184.66 388.32 C1158.0 450.0 1150.2 513.9 1161.64 576.44 C1151.4 532.6 1153.9 489.5 1168.91 449.65 C1108.9 433.2 1049.2 434.3 993.31 452.9"
+            ],
+            "overviewPaths": [
+              "M1184.66 388.32 C1113.1 391.1 1048.1 413.1 993.31 452.9"
+            ]
+          },
+          {
+            "day": 3,
+            "color": "#618344",
+            "placeIds": [
+              "london-bagel",
+              "mlb-bukchon",
+              "keungiwa",
+              "myeongdong",
+              "sura-gejang"
+            ],
+            "paths": [
+              "M1120.01 331.1 C1081.7 336.8 1044.9 331.8 1011.75 316.15 C980.2 383.6 969.4 454.2 980.03 523.89 C1015.6 470.0 1062.9 430.1 1119.21 406.41 C1060.0 391.5 1001.4 393.7 946.95 413.11"
+            ],
+            "overviewPaths": [
+              "M1120.01 331.1 C1069.4 376.3 1010.5 404.2 946.95 413.11"
+            ]
+          },
+          {
+            "day": 4,
+            "color": "#209aaa",
+            "placeIds": [
+              "hongdae",
+              "apgujeong-gopchang",
+              "nudake",
+              "garosu"
+            ],
+            "paths": [
+              "M900.51 370.95 C968.6 444.4 1051.1 493.5 1143.23 515.5 C1141.7 554.6 1129.8 590.2 1108.02 620.18 C1107.2 597.8 1100.4 577.4 1088.06 560.2"
+            ],
+            "overviewPaths": [
+              "M900.51 370.95 C945.4 454.1 1009.1 518.4 1088.06 560.2"
+            ]
+          },
+          {
+            "day": 5,
+            "color": "#8865a5",
+            "placeIds": [
+              "ipark",
+              "mongtan",
+              "hybe",
+              "hongdae"
+            ],
+            "paths": [
+              "M964.31 591.92 C977.7 529.0 1007.1 474.8 1050.64 432.35 C1027.6 476.3 1018.3 522.9 1023.27 569.52 C961.7 514.3 919.9 446.8 900.51 370.95"
+            ],
+            "overviewPaths": [
+              "M964.31 591.92 C920.5 523.2 898.8 448.0 900.51 370.95"
+            ]
+          },
+          {
+            "day": 6,
+            "color": "#df6185",
+            "placeIds": [
+              "mangwon",
+              "gwangjang",
+              "jinokhwa",
+              "hongdae"
+            ],
+            "paths": [
+              "M873.84 434.1 C948.1 466.3 1025.3 475.9 1100.64 462.15 C1085.6 480.4 1066.9 493.2 1045.52 499.65 C1009.1 441.4 959.8 397.6 900.51 370.95"
+            ],
+            "overviewPaths": [
+              "M873.84 434.1 C889.2 415.3 898.3 393.8 900.51 370.95"
+            ]
+          },
+          {
+            "day": 7,
+            "color": "#397dc1",
+            "placeIds": [
+              "hongdae",
+              "kkotge-nara",
+              "doma",
+              "icn"
+            ],
+            "paths": [
+              "M900.51 370.95 C934.2 368.5 965.8 375.3 993.62 391.06 C959.8 414.4 935.0 445.1 920.74 481.24 C716.6 560.2 505.5 610.0 300 627.63"
+            ],
+            "overviewPaths": [
+              "M900.51 370.95 C708.1 485.8 504.0 573.1 300 627.63"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "icn",
+            "x": 300,
+            "y": 627.63,
+            "color": "#397dc1",
+            "tx": 332,
+            "ty": 595.63,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Incheon Airport T1 /",
+              "仁川機場"
+            ],
+            "query": "Incheon Airport T1 首爾",
+            "geo": {
+              "lat": 37.4602,
+              "lng": 126.4407
+            },
+            "days": [
+              1,
+              7
+            ]
+          },
+          {
+            "id": "hongdae",
+            "x": 900.51,
+            "y": 370.95,
+            "color": "#397dc1",
+            "tx": 868.51,
+            "ty": 338.95,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "DW Design Residence /",
+              "DW 設計公寓（酒店）"
+            ],
+            "query": "DW Design Residence 首爾",
+            "geo": {
+              "lat": 37.5591,
+              "lng": 126.9232
+            },
+            "days": [
+              1,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "id": "myth-jokbal",
+            "x": 915.02,
+            "y": 544.46,
+            "color": "#397dc1",
+            "tx": 837.02,
+            "ty": 482.46,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Myth Jokbal Hongdae /",
+              "豬腳小姐 弘大"
+            ],
+            "query": "Myth Jokbal Hongdae 首爾",
+            "geo": {
+              "lat": 37.5559,
+              "lng": 126.9227
+            },
+            "days": [
+              1
+            ]
+          },
+          {
+            "id": "kkotge-nara",
+            "x": 993.62,
+            "y": 391.06,
+            "color": "#397dc1",
+            "tx": 1131.62,
+            "ty": 303.06,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Kkotge Nara Hongdae /",
+              "花蟹世界 弘大店"
+            ],
+            "query": "Kkotge Nara Hongdae 首爾",
+            "geo": {
+              "lat": 37.5546,
+              "lng": 126.923
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "seongsu",
+            "x": 1184.66,
+            "y": 388.32,
+            "color": "#e77e22",
+            "tx": 1046.66,
+            "ty": 300.32,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Seongsu /",
+              "聖水 Pop-up 街"
+            ],
+            "query": "Seongsu 首爾",
+            "geo": {
+              "lat": 37.5446,
+              "lng": 127.056
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "neungdong",
+            "x": 1161.64,
+            "y": 576.44,
+            "color": "#e77e22",
+            "tx": 1023.64,
+            "ty": 678.44,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Neungdong Minari Seongsu /",
+              "陵洞水芹菜 聖水店"
+            ],
+            "query": "Neungdong Minari Seongsu 首爾",
+            "geo": {
+              "lat": 37.5426,
+              "lng": 127.0553
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "maman-gelato",
+            "x": 1168.91,
+            "y": 449.65,
+            "color": "#e77e22",
+            "tx": 1030.91,
+            "ty": 361.65,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Maman Gelato Seongsu /",
+              "Maman Gelato"
+            ],
+            "query": "Maman Gelato Seongsu 首爾",
+            "geo": {
+              "lat": 37.544,
+              "lng": 127.0525
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "myeongdong",
+            "x": 1119.21,
+            "y": 406.41,
+            "color": "#618344",
+            "tx": 1257.21,
+            "ty": 508.41,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Myeongdong /",
+              "明洞"
+            ],
+            "query": "Myeongdong 首爾",
+            "geo": {
+              "lat": 37.5636,
+              "lng": 126.985
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "sura-gejang",
+            "x": 946.95,
+            "y": 413.11,
+            "color": "#618344",
+            "tx": 808.95,
+            "ty": 515.11,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Sura Gejang Myeongdong 2 /",
+              "水刺醬蟹 明洞2號店"
+            ],
+            "query": "Sura Gejang Myeongdong 2 首爾",
+            "geo": {
+              "lat": 37.5627,
+              "lng": 126.983
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "udari",
+            "x": 858.41,
+            "y": 504.5,
+            "color": "#397dc1",
+            "tx": 780.41,
+            "ty": 442.5,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Odarijip Hongdae /",
+              "烏達里家 Odarijip 弘大店"
+            ],
+            "query": "Odarijip Hongdae 首爾",
+            "geo": {
+              "lat": 37.5541,
+              "lng": 126.921
+            },
+            "days": [
+              1
+            ]
+          },
+          {
+            "id": "nudake",
+            "x": 1108.02,
+            "y": 620.18,
+            "color": "#209aaa",
+            "tx": 1076.02,
+            "ty": 670.18,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "NUDAKE Haus Dosan"
+            ],
+            "query": "NUDAKE Haus Dosan 首爾",
+            "geo": {
+              "lat": 37.5246,
+              "lng": 127.0372
+            },
+            "days": [
+              4
+            ]
+          },
+          {
+            "id": "ipark",
+            "x": 964.31,
+            "y": 591.92,
+            "color": "#8865a5",
+            "tx": 1042.31,
+            "ty": 667.92,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Yongsan I'Park Mall /",
+              "龍山 I'Park Mall（DORÉ DORÉ 喺 The Center 4F）"
+            ],
+            "query": "Yongsan I'Park Mall 首爾",
+            "geo": {
+              "lat": 37.5296,
+              "lng": 126.9648
+            },
+            "days": [
+              5
+            ]
+          },
+          {
+            "id": "mongtan",
+            "x": 1050.64,
+            "y": 432.35,
+            "color": "#8865a5",
+            "tx": 1082.64,
+            "ty": 400.35,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Mongtan /",
+              "夢炭 Mongtan（龍山烤豬肉）"
+            ],
+            "query": "Mongtan 首爾",
+            "geo": {
+              "lat": 37.5345,
+              "lng": 126.973
+            },
+            "days": [
+              5
+            ]
+          },
+          {
+            "id": "hybe",
+            "x": 1023.27,
+            "y": 569.52,
+            "color": "#8865a5",
+            "tx": 1161.27,
+            "ty": 671.52,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "HYBE HQ /",
+              "HYBE 本社"
+            ],
+            "query": "HYBE HQ 首爾",
+            "geo": {
+              "lat": 37.5246,
+              "lng": 126.9644
+            },
+            "days": [
+              5
+            ]
+          },
+          {
+            "id": "mangwon",
+            "x": 873.84,
+            "y": 434.1,
+            "color": "#df6185",
+            "tx": 841.84,
+            "ty": 402.1,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Mangwon Market /",
+              "望遠市場"
+            ],
+            "query": "Mangwon Market 首爾",
+            "geo": {
+              "lat": 37.556,
+              "lng": 126.9065
+            },
+            "days": [
+              6
+            ]
+          },
+          {
+            "id": "gwangjang",
+            "x": 1100.64,
+            "y": 462.15,
+            "color": "#df6185",
+            "tx": 1178.64,
+            "ty": 400.15,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Gwangjang Market /",
+              "廣藏市場"
+            ],
+            "query": "Gwangjang Market 首爾",
+            "geo": {
+              "lat": 37.57,
+              "lng": 127.0099
+            },
+            "days": [
+              6
+            ]
+          },
+          {
+            "id": "doma",
+            "x": 920.74,
+            "y": 481.24,
+            "color": "#397dc1",
+            "tx": 842.74,
+            "ty": 557.24,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Doma Hongdae /",
+              "Doma 韓牛 弘大"
+            ],
+            "query": "Doma Hongdae 首爾",
+            "geo": {
+              "lat": 37.5548,
+              "lng": 126.9203
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "london-bagel",
+            "x": 1120.01,
+            "y": 331.1,
+            "color": "#618344",
+            "tx": 982.01,
+            "ty": 243.1,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "London Bagel Museum Anguk /",
+              "London Bagel Museum 安國"
+            ],
+            "query": "London Bagel Museum Anguk 首爾",
+            "geo": {
+              "lat": 37.5794,
+              "lng": 126.9866
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "muguok",
+            "x": 993.31,
+            "y": 452.9,
+            "color": "#e77e22",
+            "tx": 855.31,
+            "ty": 364.9,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Muguok /",
+              "無垢屋 무구옥（人蔘雞）"
+            ],
+            "query": "Muguok 首爾",
+            "geo": {
+              "lat": 37.5765,
+              "lng": 126.979
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "mlb-bukchon",
+            "x": 1011.75,
+            "y": 316.15,
+            "color": "#618344",
+            "tx": 1089.75,
+            "ty": 254.15,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "MLB Bukchon /",
+              "MLB 北村店（custom cap）"
+            ],
+            "query": "MLB Bukchon 首爾",
+            "geo": {
+              "lat": 37.579,
+              "lng": 126.9858
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "mlb-seongsu",
+            "x": 1196,
+            "y": 515.69,
+            "color": "#397dc1",
+            "tx": 1058,
+            "ty": 617.69,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "MLB Seongsu Flagship /",
+              "MLB 聖水旗艦店（custom cap 後備）"
+            ],
+            "query": "MLB Seongsu Flagship 首爾",
+            "geo": {
+              "lat": 37.5432,
+              "lng": 127.0547
+            },
+            "days": []
+          },
+          {
+            "id": "keungiwa",
+            "x": 980.03,
+            "y": 523.89,
+            "color": "#618344",
+            "tx": 902.03,
+            "ty": 599.89,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Keungiwajip /",
+              "大瓦房 큰기와집（醬油蟹）"
+            ],
+            "query": "Keungiwajip 首爾",
+            "geo": {
+              "lat": 37.5785,
+              "lng": 126.9862
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "myeongdong-kyoja",
+            "x": 1060.53,
+            "y": 367.13,
+            "color": "#397dc1",
+            "tx": 1092.53,
+            "ty": 335.13,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Myeongdong Kyoja /",
+              "明洞餃子（刀削麵）"
+            ],
+            "query": "Myeongdong Kyoja 首爾",
+            "geo": {
+              "lat": 37.5625,
+              "lng": 126.9856
+            },
+            "days": []
+          },
+          {
+            "id": "apgujeong-gopchang",
+            "x": 1143.23,
+            "y": 515.5,
+            "color": "#209aaa",
+            "tx": 1005.23,
+            "ty": 617.5,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Apgujeong Gopchang /",
+              "狎鷗亭牛腸 압구정곱창"
+            ],
+            "query": "Apgujeong Gopchang 首爾",
+            "geo": {
+              "lat": 37.5262,
+              "lng": 127.033
+            },
+            "days": [
+              4
+            ]
+          },
+          {
+            "id": "garosu",
+            "x": 1088.06,
+            "y": 560.2,
+            "color": "#209aaa",
+            "tx": 950.06,
+            "ty": 662.2,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Garosu-gil /",
+              "新沙洞林蔭道 Garosu-gil"
+            ],
+            "query": "Garosu-gil 首爾",
+            "geo": {
+              "lat": 37.5205,
+              "lng": 127.023
+            },
+            "days": [
+              4
+            ]
+          },
+          {
+            "id": "jinokhwa",
+            "x": 1045.52,
+            "y": 499.65,
+            "color": "#df6185",
+            "tx": 907.52,
+            "ty": 601.65,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Jinokhwa Halmae Dakhanmari /",
+              "陳玉華奶奶一隻雞"
+            ],
+            "query": "Jinokhwa Halmae Dakhanmari 首爾",
+            "geo": {
+              "lat": 37.5707,
+              "lng": 127.0058
+            },
+            "days": [
+              6
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "icn",
+          "hongdae",
+          "udari",
+          "seongsu",
+          "muguok",
+          "london-bagel",
+          "sura-gejang",
+          "garosu",
+          "ipark",
+          "mangwon"
+        ],
+        "dailyLayouts": {
+          "1": {
+            "places": [
+              "icn",
+              "hongdae",
+              "myth-jokbal",
+              "udari"
+            ],
+            "labels": {
+              "icn": {
+                "x": 332,
+                "y": 595.63,
+                "anchor": "start"
+              },
+              "hongdae": {
+                "x": 868.51,
+                "y": 338.95,
+                "anchor": "end"
+              },
+              "myth-jokbal": {
+                "x": 837.02,
+                "y": 482.46,
+                "anchor": "end"
+              },
+              "udari": {
+                "x": 780.41,
+                "y": 442.5,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 600.25,
+                "y": 499.29
+              },
+              {
+                "items": [],
+                "x": 907.76,
+                "y": 457.71
+              },
+              {
+                "items": [],
+                "x": 886.71,
+                "y": 524.48
+              }
+            ]
+          },
+          "2": {
+            "places": [
+              "seongsu",
+              "neungdong",
+              "maman-gelato",
+              "muguok"
+            ],
+            "labels": {
+              "seongsu": {
+                "x": 1046.66,
+                "y": 300.32,
+                "anchor": "end"
+              },
+              "neungdong": {
+                "x": 1023.64,
+                "y": 678.44,
+                "anchor": "end"
+              },
+              "maman-gelato": {
+                "x": 1030.91,
+                "y": 361.65,
+                "anchor": "end"
+              },
+              "muguok": {
+                "x": 855.31,
+                "y": 364.9,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1173.15,
+                "y": 482.38
+              },
+              {
+                "items": [],
+                "x": 1165.28,
+                "y": 513.05
+              },
+              {
+                "items": [],
+                "x": 1081.11,
+                "y": 451.27
+              }
+            ]
+          },
+          "3": {
+            "places": [
+              "london-bagel",
+              "mlb-bukchon",
+              "keungiwa",
+              "myeongdong",
+              "sura-gejang"
+            ],
+            "labels": {
+              "london-bagel": {
+                "x": 982.01,
+                "y": 243.1,
+                "anchor": "end"
+              },
+              "mlb-bukchon": {
+                "x": 1089.75,
+                "y": 254.15,
+                "anchor": "start"
+              },
+              "keungiwa": {
+                "x": 902.03,
+                "y": 599.89,
+                "anchor": "end"
+              },
+              "myeongdong": {
+                "x": 1257.21,
+                "y": 508.41,
+                "anchor": "start"
+              },
+              "sura-gejang": {
+                "x": 808.95,
+                "y": 515.11,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1065.88,
+                "y": 323.63
+              },
+              {
+                "items": [],
+                "x": 995.89,
+                "y": 420.02
+              },
+              {
+                "items": [],
+                "x": 1049.62,
+                "y": 465.15
+              },
+              {
+                "items": [],
+                "x": 1033.08,
+                "y": 409.76
+              }
+            ]
+          },
+          "4": {
+            "places": [
+              "hongdae",
+              "apgujeong-gopchang",
+              "nudake",
+              "garosu"
+            ],
+            "labels": {
+              "hongdae": {
+                "x": 868.51,
+                "y": 338.95,
+                "anchor": "end"
+              },
+              "apgujeong-gopchang": {
+                "x": 1005.23,
+                "y": 617.5,
+                "anchor": "end"
+              },
+              "nudake": {
+                "x": 1076.02,
+                "y": 670.18,
+                "anchor": "end"
+              },
+              "garosu": {
+                "x": 950.06,
+                "y": 662.2,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1021.87,
+                "y": 443.23
+              },
+              {
+                "items": [],
+                "x": 1125.63,
+                "y": 567.84
+              },
+              {
+                "items": [],
+                "x": 1098.04,
+                "y": 590.19
+              }
+            ]
+          },
+          "5": {
+            "places": [
+              "ipark",
+              "mongtan",
+              "hybe",
+              "hongdae"
+            ],
+            "labels": {
+              "ipark": {
+                "x": 1042.31,
+                "y": 667.92,
+                "anchor": "start"
+              },
+              "mongtan": {
+                "x": 1082.64,
+                "y": 400.35,
+                "anchor": "start"
+              },
+              "hybe": {
+                "x": 1161.27,
+                "y": 671.52,
+                "anchor": "start"
+              },
+              "hongdae": {
+                "x": 868.51,
+                "y": 338.95,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1007.48,
+                "y": 512.13
+              },
+              {
+                "items": [],
+                "x": 1036.95,
+                "y": 500.94
+              },
+              {
+                "items": [],
+                "x": 961.89,
+                "y": 470.24
+              }
+            ]
+          },
+          "6": {
+            "places": [
+              "mangwon",
+              "gwangjang",
+              "jinokhwa",
+              "hongdae"
+            ],
+            "labels": {
+              "mangwon": {
+                "x": 841.84,
+                "y": 402.1,
+                "anchor": "end"
+              },
+              "gwangjang": {
+                "x": 1178.64,
+                "y": 400.15,
+                "anchor": "start"
+              },
+              "jinokhwa": {
+                "x": 907.52,
+                "y": 601.65,
+                "anchor": "end"
+              },
+              "hongdae": {
+                "x": 868.51,
+                "y": 338.95,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 987.24,
+                "y": 448.13
+              },
+              {
+                "items": [],
+                "x": 1073.08,
+                "y": 480.9
+              },
+              {
+                "items": [],
+                "x": 973.01,
+                "y": 435.3
+              }
+            ]
+          },
+          "7": {
+            "places": [
+              "hongdae",
+              "kkotge-nara",
+              "doma",
+              "icn"
+            ],
+            "labels": {
+              "hongdae": {
+                "x": 868.51,
+                "y": 338.95,
+                "anchor": "end"
+              },
+              "kkotge-nara": {
+                "x": 1131.62,
+                "y": 303.06,
+                "anchor": "start"
+              },
+              "doma": {
+                "x": 842.74,
+                "y": 557.24,
+                "anchor": "end"
+              },
+              "icn": {
+                "x": 332,
+                "y": 595.63,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 947.07,
+                "y": 381
+              },
+              {
+                "items": [],
+                "x": 957.18,
+                "y": 436.15
+              },
+              {
+                "items": [],
+                "x": 610.37,
+                "y": 554.43
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
